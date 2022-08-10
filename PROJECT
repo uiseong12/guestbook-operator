@@ -5,5 +5,15 @@ plugins:
   manifests.sdk.operatorframework.io/v2: {}
   scorecard.sdk.operatorframework.io/v2: {}
 projectName: sample-operator
-repo: github.com/uiseong12/guestbook-operator
+repo: github.com/uiseong/sample-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: example.com
+  group: multitenancy
+  kind: TenancyFrontend
+  path: github.com/uiseong/sample-operator/api/v1alpha1
+  version: v1alpha1
 version: "3"

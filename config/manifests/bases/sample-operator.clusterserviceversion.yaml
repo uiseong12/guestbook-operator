@@ -1,0 +1,44 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: ClusterServiceVersion
+metadata:
+  annotations:
+    alm-examples: '[]'
+    capabilities: Basic Install
+  name: sample-operator.v0.0.0
+  namespace: placeholder
+spec:
+  apiservicedefinitions: {}
+  customresourcedefinitions:
+    owned:
+    - description: TenancyFrontend is the Schema for the tenancyfrontends API
+      displayName: Tenancy Frontend
+      kind: TenancyFrontend
+      name: tenancyfrontends.multitenancy.example.com
+      version: v1alpha1
+  description: guest-book
+  displayName: sample-operator
+  icon:
+  - base64data: ""
+    mediatype: ""
+  install:
+    spec:
+      deployments: null
+    strategy: ""
+  installModes:
+  - supported: false
+    type: OwnNamespace
+  - supported: false
+    type: SingleNamespace
+  - supported: false
+    type: MultiNamespace
+  - supported: true
+    type: AllNamespaces
+  keywords:
+  - sample
+  links:
+  - name: Sample Operator
+    url: https://sample-operator.domain
+  maturity: alpha
+  provider:
+    name: ui
+  version: 0.0.0
