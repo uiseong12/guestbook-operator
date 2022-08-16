@@ -168,7 +168,7 @@ spec:
                 - --leader-elect
                 command:
                 - /manager
-                image: controller:latest
+                image:  you881123/sample-operator:v0.0.1
                 livenessProbe:
                   httpGet:
                     path: /healthz
