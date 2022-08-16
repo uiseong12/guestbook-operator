@@ -192,7 +192,7 @@ spec:
                 securityContext:
                   allowPrivilegeEscalation: false
               securityContext:
-                runAsNonRoot: true
+                runAsNonRoot: false
               serviceAccountName: sample-operator-controller-manager
               terminationGracePeriodSeconds: 10
       permissions:
